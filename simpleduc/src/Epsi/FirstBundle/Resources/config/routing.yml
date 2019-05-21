@@ -1,0 +1,19 @@
+epsi_first_homepage:
+    path:     /
+    defaults: { _controller: EpsiFirstBundle:Default:index }
+epsi_first_utilisateur:
+    path:     /utilisateur
+    defaults: { _controller: EpsiFirstBundle:Utilisateur:utilisateur }
+epsi_first_theme:
+    path:     /theme
+    defaults: { _controller: EpsiFirstBundle:Theme:theme }
+    
+epsi_first_entreprise:
+    path:     /entreprise
+    defaults: { _controller: EpsiFirstBundle:Entreprise:entreprise }
+
+epsi_first_mot:
+    path:     /mot
+    defaults: { _controller: EpsiFirstBundle:Mot:mot }
+    
+    

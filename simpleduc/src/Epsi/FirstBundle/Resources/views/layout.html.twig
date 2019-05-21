@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %} Premier Bundle {% endblock %}</title>
+        <link rel="stylesheet" href="{{asset('bundles/epsifirst/css/bootstrap.min.css')}}"
+              type="text/css" />
+        <link rel="stylesheet" href="{{asset('bundles/epsifirst/css/style.css')}}" type="text/css"/>
+        <link rel="shortcut icon" href="{{asset('bundles/epsifirst/images/favicon.ico')}}"/>
+        <link rel="stylesheet" href="{{asset('bundles/epsifirst/css/font-awesome.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('bundles/epsifirst/css/flaticon.css')}}"/>
+        <link rel="stylesheet" href="{{asset('bundles/epsifirst/css/owl.carousel.css')}}"/>
+
+    </head>
+    <body>
+        {% block body %}
+            <header class="header-section">
+                <div class="header-warp">
+                    <div class="container">
+                        <a href="#" class="site-logo">
+                            <img src="{{asset('bundles/epsifirst/images/logo.png')}}" alt="">
+                        </a>
+                        <div class="user-panel">
+                            <a href="#">Login</a><span>/</span><a href="">Register</a>
+                        </div>
+                        <div class="nav-switch">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        {% block menu %}
+                            <ul class="main-menu">
+                                <li><a href="{{ path('epsi_first_homepage')}}">Accueil</a></li>
+                                <li><a href="{{ path('epsi_first_utilisateur')}}">Utilisateur</a></li>
+                                <li><a href="{{ path('epsi_first_entreprise')}}">Entreprise</a></li>
+                                <li><a href="{{ path('epsi_first_theme')}}">Thème</a></li>
+                            </ul>
+                        {% endblock %}
+                    </div>
+                </div>
+            </header>
+
+
+            {% block contenu %}
+            {% endblock %}
+
+        
+    {% endblock %}
+</body>
+</html>
